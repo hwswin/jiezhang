@@ -16,7 +16,7 @@
       </view>
       <navigator url="/pages/message/message"><view class="iconfont jz-icon-xiaoxi {{ header.has_no_read ? 'no-read-msg' : '' }}"></view></navigator>
     </view>
-    
+
     <view class="zan-btns new-record">
       <navigator url="/pages/statements/statement">
         <button class="zan-btn jz-btn btn-shadow">记一笔</button>
@@ -27,7 +27,7 @@
       <view class="the-week {{ current == 0 ? 'active' : '' }}" @tap="switchScope(0)">近一周消费</view>
       <view class="preorder {{ current == 1 ? 'active' : '' }}" @tap="switchScope(1)">预购清单</view>
     </view>
-    
+
     <view wx:if="{{ current == 1 && prepareOrders.length > 0 }}" class="create-preorder" @tap="showCreateModal()">+ 新增预购商品</view>
 
     <swiper current="{{ current }}" style="flex: 1;margin-top: 24rpx;" bindchange="swiperChange">
@@ -42,7 +42,7 @@
           <view class="zan-loading"></view>
           <view class="zan-loadmore__tips">加载中...</view>
         </view>
-        
+
         <view wx:if="{{ list.length == 0 && !showLoading }}">
           <empty :title.sync="emptyTitle"></empty>
         </view>
@@ -60,15 +60,15 @@
       </swiper-item>
     </swiper>
 
-    <preorderForm 
-      :showModal.sync="showModal" 
+    <preorderForm
+      :showModal.sync="showModal"
       :good.sync="preOrder"
       :showDelteBtn.sync="showDelteBtn"
       @submit.user="createPrepareOrder"
       @del.user="delPrepareOrder"
       @markbuy.user="markBuy">
     </preorderForm>
-    
+
   </view>
 </template>
 
@@ -115,9 +115,9 @@
 
     onShow () {
       this.getHeader()
-      this.getList()
-      this.getPreOrders()
-      this.bgImage()
+//      this.getList()
+//      this.getPreOrders()
+//      this.bgImage()
     }
 
     methods = {

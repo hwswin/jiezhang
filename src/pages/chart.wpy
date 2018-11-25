@@ -4,11 +4,11 @@
 		<calendar
 			show-more-days="{{ false }}"
 			lunar="{{ false }}"
-			weeks-type="cn" 
-			cell-size="30" 
+			weeks-type="cn"
+			cell-size="30"
 			calendar-style="calendar-main"
-			header-style="calendar-header" 
-			board-style="calendar-board" 
+			header-style="calendar-header"
+			board-style="calendar-board"
 			days-color="{{daySelect}}"
 			bindprevMonth="monthChange"
 			bindnextMonth="monthChange"
@@ -90,7 +90,7 @@
 			singleList: [],
 			daySelect: []
 		};
-		
+
 		onLoad () {
 			this.daySelect.push(this.daySelectObject(NowDate.getFullYear(), NowDate.getMonth() + 1, this.today, '#2196F3'))
 			this.getChart()
@@ -139,11 +139,11 @@
 				}
 				this.getChart()
 			},
-	
+
 			changeTab(item) {
 				this.tabActive = item
 			},
-			
+
 			monthChange (event) {
 				let detail = event.detail
 				for(let i = 0, len = this.daySelect.length; i < len; ++i) {
@@ -239,7 +239,7 @@
 			singleColumn: singleColumn,
 			statement: IndexStatement
 		};
-		
+
   }
 </script>
 <style lang="scss" src="@/public/styles/chart.scss"></style>

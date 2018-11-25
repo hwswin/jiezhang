@@ -48,13 +48,13 @@ const doRequest = async (url, method, params, options = {}) => {
         pageRoutes.push(p.route)
       }
     }
-    
+
     const thirdSession = await getOpenId()
     const result = await wepy.request({
       url: url,
       method: method,
       data: params,
-      header: { 
+      header: {
         'Content-Type': 'application/json',
         'X-WX-Skey': thirdSession,
         'X-WX-APP-ID': Host.appid,

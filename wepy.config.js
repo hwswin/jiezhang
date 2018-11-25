@@ -20,7 +20,7 @@ module.exports = {
       compress: prod
     },
     sass: {
-      'outputStyle': 'compressed'
+      'outputStyle': 'compcressed'
     },
     babel: {
       sourceMap: !prod,
